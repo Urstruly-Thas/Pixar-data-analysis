@@ -1,5 +1,8 @@
 # Pixar Film Analytics - SQL Portfolio Project
 
+![pixar](https://github.com/user-attachments/assets/e68b6e24-1d11-4bd4-a08d-91445e46e47a)
+
+
 ## Project Background
 
 This project dives into the business, creative, and commercial dimensions of Pixar Animation Studios using SQL-based analytics. With Pixar being a globally recognized film studio( and my personal favourite), this analysis holds relevance for multiple stakeholders:
