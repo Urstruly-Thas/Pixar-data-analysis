@@ -4,13 +4,10 @@
 
 This project dives into the business, creative, and commercial dimensions of Pixar Animation Studios using SQL-based analytics. With Pixar being a globally recognized film studio( and my personal favourite), this analysis holds relevance for multiple stakeholders:
 
-Business Analysts & Executives: To understand what drives profitability and critical success.
-
-Creative Teams (Writers, Directors): To assess audience reception, genre performance, and award trends.
-
-Investors & Studio Heads: To evaluate return on investment (ROI), market timing, and long-term success patterns.
-
-Data Enthusiasts: To demonstrate how SQL can uncover deep patterns in entertainment data.
+- Business Analysts & Executives: To understand what drives profitability and critical success.
+- Creative Teams (Writers, Directors): To assess audience reception, genre performance, and award trends.
+- Investors & Studio Heads: To evaluate return on investment (ROI), market timing, and long-term success patterns.
+- Data Enthusiasts: To demonstrate how SQL can uncover deep patterns in entertainment data.
 
 
 ## Dataset and Table Overview
@@ -31,8 +28,7 @@ This project uses a relational database of Pixar films structured across six cor
 ---
 
 ##  Executive Summary
-
-This SQL-driven project delivers a multi-level analysis of Pixar’s cinematic universe. Using common SQL tools like joins, CTEs, window functions, and conditional logic, it uncovers key patterns that explain how and why Pixar films perform well — or don’t — across financial, audience, and critical dimensions.
+This project uses SQL to analyze Pixar Animation Studios' filmography, covering 27 titles from 1995 to 2020. By querying a relational database with six normalized tables—including data on budgets, revenue, public ratings, genre, release dates, and awards,we derive patterns in profitability, critical success, and creative decisions. The analysis applies SQL tools like CTEs, aggregations, and window functions to evaluate return on investment, release timing, genre consistency, and award alignment. For example, Toy Story achieved over 1000% ROI despite a modest budget, while Incredibles 2, released in June, became the highest-grossing Pixar film. Genres like Adventure and Comedy emerged as high-performing and stable, while directors such as John Lasseter consistently contributed to critically and commercially successful films. The project not only visualizes trends but also recommends strategic actions Pixar could take,from maintaining optimal budgets to leveraging underappreciated "hidden gems" like Inside Out and Up. The insights offer practical value for data-driven decision-making in creative industries.
 
 ###  Films and Milestones
 
@@ -47,6 +43,41 @@ FROM pixar_filmss
 GROUP BY year
 ORDER BY no_of_films DESC;
 ```
+
+### Key Performance Indicators
+
+- **Average Budget:** $137,777,778
+- **Top Profitable Films:**
+      - Incredibles 2 – $1.1B profit
+      - Toy Story 4
+      - Finding Dory
+- **ROI Leaders:**
+      - Toy Story (ROI > 1000%)
+      - Finding Nemo
+      - Inside Out
+
+```sql
+SELECT ROUND(AVG(budget)) AS average_budget FROM box_office;
+Highest Revenue: Incredibles 2 – $1.24 billion
+
+SELECT film, (box_office_worldwide - budget) AS profit
+FROM box_office
+ORDER BY profit DESC
+LIMIT 3;
+
+SELECT film, ((box_office_worldwide - budget)/budget) * 100 AS roi
+FROM box_office
+ORDER BY roi DESC;
+```
+
+- **Top IMDb Rated Films:**
+
+- Inside Out – 8.5
+- Coco – 8.4
+- Up – 8.3
+- Toy Story 3 – 8.3
+- Finding Nemo – 8.2
+
 
 ## Insights And Recommendations
 
@@ -126,10 +157,12 @@ Only 30–40% of Oscar-winning films also performed well commercially. "Brave", 
 
 
 
+## Conclusion
+
+This SQL project demonstrates how structured data and targeted queries can uncover meaningful insights in the film industry. By analyzing Pixar's catalog across financial, creative, and critical dimensions, we show how performance is influenced by factors such as release month, genre consistency, directorial leadership, and budget control. The data suggests actionable strategies: release films in high-performing months like June, focus on proven genres, maintain a budget close to $137M, and use ROI—not just revenue—as a decision-making tool. It also highlights opportunities for monetizing award-winning films that may not succeed at the box office but hold long-term value. Overall, this project bridges SQL technique with storytelling intelligence, delivering recommendations grounded in both numbers and narrative.
 
 
-
-
+PS: This is one of my initial SQL projects, and while I’ve aimed for clarity and depth, there may be areas for improvement in structure, or interpretation. I'm continuously learning and open to feedback that can help me refine my approach and grow as an analyst.
 
 
 
