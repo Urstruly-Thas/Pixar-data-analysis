@@ -1,6 +1,6 @@
 # Pixar Film Analytics - SQL Portfolio Project
 
-![pixar](https://github.com/user-attachments/assets/e68b6e24-1d11-4bd4-a08d-91445e46e47a)
+![Screenshot 2025-07-08 015712](https://github.com/user-attachments/assets/035de5f3-7cfd-4361-b991-95e63e9b206f)
 
 
 ## Project Background
