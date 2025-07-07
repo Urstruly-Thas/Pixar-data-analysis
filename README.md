@@ -46,12 +46,36 @@ SELECT YEAR(release_date) AS year, COUNT(*) AS no_of_films
 FROM pixar_filmss
 GROUP BY year
 ORDER BY no_of_films DESC;
-💰 Financial Metrics
-Average Budget: $137,777,778
+```
+
+## Recommendations
+
+### 1. Prioritize Film Releases in June and November
+June and November have the highest average revenues - over $700M in some years - thanks to school holidays and family-friendly timing. For instance, Incredibles 2 (June) earned over $1.24B.
+
+```sql
+SELECT MONTH(f.release_date) AS month_of_release, ROUND(AVG(b.box_office_worldwide)) AS box_office
+FROM pixar_filmss f
+JOIN box_office b ON f.film = b.film
+GROUP BY month_of_release
+ORDER BY box_office DESC;
 ```
 
 
 
+### 2. Adventure and Comedy emerged as the most popular and all time genres
+Genres like Adventure and Comedy showed the lowest revenue variability (standard deviation < $250M) and highest box office averages (Adventure: $637M+). They offer reliable performance both critically and commercially
+
+```sql
+Copy
+Edit
+SELECT g.value AS genre, ROUND(STDDEV(b.box_office_worldwide), 2) AS revenue_std
+FROM genres g
+JOIN box_office b ON g.film = b.film
+WHERE g.category = 'Genre'
+GROUP BY genre
+ORDER BY revenue_std ASC;
+```
 
 
 
