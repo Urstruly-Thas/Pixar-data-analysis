@@ -1,4 +1,4 @@
-# Pixar Film Analytics - SQL Portfolio Project
+# Pixar Film Analytics - Portfolio Project (SQL & POWER BI)
 
 ![image](https://github.com/user-attachments/assets/e62e4104-b85c-461b-878b-b2f33ff3a72c)
 
@@ -16,7 +16,9 @@ This project dives into the business, creative, and commercial dimensions of Pix
 
 ## Dataset and Table Overview
 
-![Screenshot 2025-07-07 183816](https://github.com/user-attachments/assets/15fbd7af-9d2e-4356-9217-90d981f7bf69)
+![WhatsApp Image 2025-07-08 at 13 27 03_5a1d78c3](https://github.com/user-attachments/assets/feda6341-b1f2-41a6-a9cf-f95c11fea0dd)
+
+
 
 
 
